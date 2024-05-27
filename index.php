@@ -1,0 +1,60 @@
+<?php
+    session_start();
+    if(isset($_POST['guestname'])){
+        $_SESSION['guest'] = $_POST['guestname'];
+        echo '<script>window.location.replace("profiles.php")</script>';
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/geur.css">
+    <title>Home</title>
+    <style>
+        .card-header img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST">
+        <div class="container full-height center-content">
+            <div class="col-12 col-md-8 col-xl-4">
+                <div class="card text-left" style="border-radius: 10px;">
+                    <div class="card-header px-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="/assets/images/menn.png" alt="Profile Picture" class="w-100">
+                            </div>
+                            <div class="col-8 d-flex flex-column justify-content-left mt-4">
+                                <div>
+                                    <h5>Thanaphat Komut</h5>
+                                </div>
+                                <div class=""><small>Web Developer</small></div>
+                                <div>Menn's Portfolio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group text-center">
+                            <input type="text" class="form-control" name="guestname" id="guestname" placeholder="Please enter your name..." required style="border-radius: 8px;">
+                            <button href="" class="mt-2 w-100 btn-nim" style="">Start</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
