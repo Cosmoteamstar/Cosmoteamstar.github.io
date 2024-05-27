@@ -51,12 +51,14 @@
 </body>
 <script>
     function Checkgo() {
-        inputGuest = document.getElementById('guestname').value;
-        if (inputGuest != null) {
+        const inputGuest = document.getElementById('guestname').value.trim();
+        const errorMessage = document.getElementById('error-message');
+        if (inputGuest.length > 0) {
             window.location.replace('profiles.html');
+        } else {
+            errorMessage.style.display = 'block';
         }
     }
-
 </script>
 
 </html>
